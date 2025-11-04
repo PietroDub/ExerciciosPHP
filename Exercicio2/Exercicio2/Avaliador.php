@@ -14,13 +14,18 @@
         }
 
         public function fazerAvaliacao(Receita $receita, float $nota): Avaliacao {
-        $avaliacao = new Avaliacao($nota, $this, $receita);
-        $this->avaliacoes[] = $avaliacao;
-        return $avaliacao;
+            $avaliacao = new Avaliacao($nota, $this, $receita);
+            $this->avaliacoes[] = $avaliacao;
+            
+            // ADICIONAR ESTA LINHA para vincular a avaliação à receita
+            $receita->addAvaliacao($avaliacao);
+            
+            return $avaliacao;
         }
 
-        public function getAvaliacoes(): array {
+        public function getAvaliacoes() {
             return $this->avaliacoes;
         }
+
     }
 ?>

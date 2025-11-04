@@ -24,5 +24,13 @@
             return $this->avaliacoes;
         }
 
+        public function getNotasFormatadas(): string {
+        $notas = [];
+        foreach ($this->avaliacoes as $avaliacao) {
+            $notas[] = $avaliacao->getNota() . " ⭐";
+        }
+        return empty($notas) ? "Sem avaliações" : implode(", ", $notas);
+        }
+
     }
 ?>

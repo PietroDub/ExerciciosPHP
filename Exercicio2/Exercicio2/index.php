@@ -37,6 +37,10 @@ $avaliacao3 = $avaliador2->fazerAvaliacao($receita1, 4.8);
 $avaliacao4 = $avaliador2->fazerAvaliacao($receita3, 4.2);
 
 echo "<h2>⭐ Avaliações Realizadas</h2>";
-
+echo "<strong>Avaliações da Pizza Margherita:</strong> " . $receita1->getNotasFormatadas();
+echo "<br>";
+echo "<strong>Avaliações do Bolo de Chocolate:</strong> " . $receita2->getNotasFormatadas();
+echo "<br>";
+echo "<strong>Avaliações da Lasanha Bolonhesa:</strong> " . $receita3->getNotasFormatadas();
 
 ?>
