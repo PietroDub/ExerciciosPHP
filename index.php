@@ -42,4 +42,11 @@ echo "<pre>";
 $pessoa1->exibir();
 echo "</pre>";
 
+echo "<pre>";
+echo "Data do contrato:". $festa1->getContrato();
+echo "<br>";
+echo "Data da Festa". $festa1->getFesta();
+echo "<br>";
+echo "Valor da festa:". $festa1->getValor();
+echo "</pre>";
 ?>
